@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center px-10 md:px-0 py-24">
+    <main className="flex flex-col items-center px-10 md:px-0 py-24">
       <Image
         className="dark:invert"
         alt="Next.js"

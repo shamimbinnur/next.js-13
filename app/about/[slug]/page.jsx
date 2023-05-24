@@ -10,9 +10,8 @@ export default function page({ params }) {
     notFound()
   }
 
-
   return (
-    <main className="w-full">
+    <main className="w-full min-h-screen">
       <Container paddingX={80}>
         <h1 className="text-4xl font-medium pb-4">{section.title}</h1>
         <p className="text-lg">{section.description}</p>
@@ -21,7 +20,6 @@ export default function page({ params }) {
   );
 }
 
-// Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
   const slug = aboutUs.sections.map((section) => (section.slug))
   return slug.map((slug) => ({
