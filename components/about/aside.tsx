@@ -10,8 +10,8 @@ const Aside = () => {
   ))
 
   return (
-    <aside className="border-r-2 w-48 border-white border-opacity-10 dark:border-invert">
-      <div>
+    <aside className="border-r-2 w-52 border-white border-opacity-5 dark:border-invert">
+      <div className="pr-2 text-lg">
         <ul>
           {sections.map((section) => (
             <li className="py-2" key={section.slug}>

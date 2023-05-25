@@ -16,10 +16,10 @@ const StyledNav: React.FC<StyledNavProps> = ({
   className
 }) => {
   const segment = useSelectedLayoutSegment();
-  const activeStyle = segment === slug ? 'font-bold opacity-100 ' : '';
+  const activeStyle = segment === slug ? 'font-bold text-4xl text-black dark:invert' : '';
 
   return (
-    <Link href={`/about/${slug}`} className={`${className} ${activeStyle} text-xl opacity-50 hover:opacity-100 hover:scale-105 hover:translate-x-2 hover:font-bold transition-all `}>
+    <Link href={`/about/${slug}`} className={`${className} ${activeStyle} duration-700 transition-all`}>
       {title}
     </Link>
   )

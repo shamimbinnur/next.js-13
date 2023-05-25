@@ -1,4 +1,4 @@
-import Nav from '@/components/common/Nav'
+import Navigation from '@/components/common/Navigation'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Container from '@/components/common/Container'
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Container>
-          <Nav/>
+          <Navigation/>
           {children}
         </Container>
       </body>
