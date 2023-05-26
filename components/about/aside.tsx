@@ -10,7 +10,7 @@ const Aside = () => {
   ))
 
   return (
-    <aside className="border-r-2 w-52 hidden md:block border-white border-opacity-5 dark:border-invert">
+    <aside className="border-r-2 w-60 hidden md:block border-white border-opacity-5 dark:border-invert">
       <div className="pr-2 text-lg">
         <ul>
           {sections.map((section) => (

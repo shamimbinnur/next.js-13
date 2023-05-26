@@ -12,10 +12,10 @@ export default function page({ params }) {
 
   return (
     <main className="w-full min-h-screen">
-      <Container paddingX={80}>
+      <div className="px-0 md:px-16">
         <h1 className="text-4xl font-medium pb-4">{section.title}</h1>
         <p className="text-lg">{section.description}</p>
-      </Container>
+      </div>
     </main>
   );
 }

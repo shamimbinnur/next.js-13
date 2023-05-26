@@ -4,7 +4,7 @@ import Container from "@/components/common/Container";
 
 export default function layout({ children }) {
   return (
-    <Container direction="col" paddingX={40} paddingY={40} >
+    <Container direction="col">
       <div className="md:hidden">
         <Dropdown/>
       </div>
