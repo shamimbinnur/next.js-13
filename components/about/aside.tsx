@@ -10,7 +10,7 @@ const Aside = () => {
   ))
 
   return (
-    <aside className="border-r-2 w-52 border-white border-opacity-5 dark:border-invert">
+    <aside className="border-r-2 w-52 hidden md:block border-white border-opacity-5 dark:border-invert">
       <div className="pr-2 text-lg">
         <ul>
           {sections.map((section) => (
@@ -18,6 +18,11 @@ const Aside = () => {
               <StyledNav slug={section.slug} title={section.title} />
             </li>
           ))}
+
+          {/* Intentional invalid slug */}
+          <li className="py-2" key="boom">
+            <StyledNav slug="boom" title="Not Found*" />
+          </li>
         </ul>
       </div>
     </aside>

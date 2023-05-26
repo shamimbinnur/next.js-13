@@ -1,14 +1,14 @@
 export const aboutUs = {
   sections: [
     { 
-      slug: "who-we-are",
-      title: "Who we are",
-      description: "We are a passionate team of developers dedicated to pushing the boundaries of web development. We love exploring new technologies and finding innovative solutions to complex problems.",
+      slug: "about-next.js",
+      title: "About Next.js",
+      description: "Next.js is a widely-used React framework that simplifies the development of modern web applications. It focuses on scalability and production readiness, offering features such as server-side rendering (SSR), static site generation (SSG), and various advanced capabilities. With Next.js, developers can effortlessly build robust and efficient applications powered by React.",
     },
     {
-      slug: "what-we-do",
-      title: "What We Do",
-      description: "Our focus is on creating exceptional web experiences using Next.js 13. We specialize in building high-performance, scalable, and SEO-friendly applications. Our expertise extends to utilizing the powerful features of Next.js, such as server-side rendering (SSR), static site generation (SSG), API routes, and much more.",
+      slug: "what-this-site-is",
+      title: "What this site is",
+      description: "This site is an example project built with Next.js 13 to demonstrate the new feature of Next.js 13. This example site is build to showcasing the incredible capabilities of Next.js 13. Explore the power of Next.js 13 and its innovative App Route feature in this hands-on example project. Gain practical insights and unleash your web development potential with our Next.js example project built specifically for Next.js 13",
     },
     {
       slug: "our-mission",
