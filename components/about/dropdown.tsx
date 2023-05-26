@@ -4,24 +4,31 @@ import React from 'react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import Link from 'next/link';
 import { aboutUs } from '@/src/contents/about';
+import { useSelectedLayoutSegment } from 'next/navigation';
+
+import { ChevronDownIcon } from '@radix-ui/react-icons';
 
 const Dropdown:React.FC = () => {
 
-  const slugs = aboutUs.sections.map((section) => (
+  const navigationItems = aboutUs.sections.map((section) => (
     {
       title: section.title,
       slug: section.slug
     }
   ))
 
+  const segment = useSelectedLayoutSegment();
+  const currentNavigation = navigationItems.find((navigation) => navigation.slug === segment);
+
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <button
-          className="rounded-md h-[25px] w-full border-black dark:border-white py-4 mb-14 border text-white inline-flex items-center justify-center"
+          className="rounded-md h-[25px] px-4 w-full border-black dark:border-white py-4 mb-14 border text-white inline-flex items-center"
           aria-label="Customise options"
-        >
-          <span>About us</span>
+        > 
+          <ChevronDownIcon className="w-4 h-4 mr-4"/>
+          <span className="mx-auto">{currentNavigation?.title || `/about/${segment}`}</span>
         </button>
       </DropdownMenu.Trigger>
 
@@ -32,7 +39,7 @@ const Dropdown:React.FC = () => {
         >
           <DropdownMenu.Separator className="group h-[1px] bg-violet6 m-[5px]"/>
           {
-            slugs?.map(({ slug, title}) => (
+            navigationItems?.map(({ slug, title}) => (
               <DropdownMenu.Item asChild key={slug} className="group font-bold p-4 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1">
                 <Link href={`/about/${slug}`}>{title}</Link>
               </DropdownMenu.Item>
