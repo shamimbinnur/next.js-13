@@ -16,7 +16,7 @@ export default function Home() {
           
           <div className="flex flex-col text-black dark:invert items-center max-w-3xl gap-4 text-center">
             <h1 className="text-2xl md:text-5xl mt-20 md:pt-40">Leverage the power of Next.js 13</h1>
-            <h2 className="text-sm md:text-base">This site is a streamlined example project built with Next.js 13 to demonstrate how to leverage the latest features of Next.js 13 along with the new App Route.</h2>
+            <h2 className="text-sm md:text-base">This site is a streamlined example project built with Next.js 13, App Router, Server Component to demonstrate how to leverage the latest features of Next.js 13 along with the new App Router.</h2>
           </div>
         </div>
       </Container>
