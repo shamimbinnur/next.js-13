@@ -6,5 +6,11 @@ const Page = () => {
   redirect(`/about/${firstSlug}`)
 }
 
-
 export default Page
+
+export async function generateMetadata() {
+  return {
+    title: aboutUs.sections[0].title,
+    description: aboutUs.sections[0].description,
+  };
+}

@@ -1,11 +1,10 @@
-import Container from "@/components/common/Container";
 import { aboutUs } from '../../../src/contents/about.ts'
 import { notFound } from 'next/navigation';
 
 export default function page({ params }) {
   const { slug } = params;
   const section = aboutUs.sections.find((section) => section.slug === slug);
-
+  
   if (!section) {
     notFound()
   }
@@ -25,4 +24,14 @@ export async function generateStaticParams() {
   return slug.map((slug) => ({
     slug: slug
   }));
+}
+
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const section = aboutUs.sections.find((section) => section.slug === slug);
+
+  return {
+    title: section ? section.title : "Not found",
+    description: section ? section.description : "Not found",
+  };
 }
