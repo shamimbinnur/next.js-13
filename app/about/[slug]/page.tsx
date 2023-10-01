@@ -1,7 +1,9 @@
-import { aboutUs } from '../../../src/contents/about.ts'
+
+import EditCallBack from '@/components/utils/EditCallBack';
+import { aboutUs } from '../../../src/contents/about'
 import { notFound } from 'next/navigation';
 
-export default function page({ params }) {
+export default function page({ params } : { params: { slug: string }}) {
   const { slug } = params;
   const section = aboutUs.sections.find((section) => section.slug === slug);
   
@@ -14,6 +16,10 @@ export default function page({ params }) {
       <div className="px-0 md:px-16">
         <h1 className="text-4xl font-medium pb-4">{section.title}</h1>
         <p className="text-lg">{section.description}</p>
+
+        <div className="flex justify-end">
+          <EditCallBack path="app/about/[slug]/page.tsx" />
+        </div>
       </div>
     </main>
   );
@@ -26,7 +32,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params } :{ params: { slug: string }}) {
   const { slug } = params;
   const section = aboutUs.sections.find((section) => section.slug === slug);
 

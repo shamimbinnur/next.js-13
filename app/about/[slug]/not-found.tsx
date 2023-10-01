@@ -1,4 +1,5 @@
 import Container from "@/components/common/Container"
+import EditCallBack from "@/components/utils/EditCallBack"
 import Link from "next/link"
 
 const NotFound = () => {
@@ -21,6 +22,10 @@ const NotFound = () => {
             <Link href="/about/fruits">3. /about/fruits</Link>
           </li>
         </ul>
+
+        <div className="flex justify-end">
+          <EditCallBack path="app/about/[slug]/not-found.tsx" />
+        </div>
       </div>
     </Container>
   )
