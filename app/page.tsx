@@ -20,7 +20,7 @@ export default function Home() {
             <h2 className="text-sm md:text-base">This site is a streamlined example project built with Next.js 13, App Router, Server Component to demonstrate how to leverage the latest features of Next.js 13 along with the new App Router.</h2>
           </div>
 
-          <EditCallBack editUrl="#" />
+          <EditCallBack path="app/page.tsx" />
         </div>
       </Container>
     </main>

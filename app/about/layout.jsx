@@ -1,6 +1,7 @@
 import Aside from "@/components/about/aside";
 import Dropdown from "@/components/about/dropdown";
 import Container from "@/components/common/Container";
+import EditCallBack from "@/components/utils/EditCallBack";
 
 export default function layout({ children }) {
   return (
@@ -11,6 +12,7 @@ export default function layout({ children }) {
 
       <div className="flex">
         <Aside/>
+        
         {children}
       </div>
     </Container>
