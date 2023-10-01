@@ -21,7 +21,7 @@ const navigation = [
   },
   {
     name: 'GitHub',
-    url: 'https://github.com'
+    url: 'https://github.com/shamimbinnur/next.js-13'
   }
 ]
 
