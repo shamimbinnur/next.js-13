@@ -1,4 +1,3 @@
-import Aside from "@/components/about/aside";
 import Container from "@/components/common/Container";
 
 export default function layout({ children }) {
